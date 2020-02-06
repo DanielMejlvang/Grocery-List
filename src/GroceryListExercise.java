@@ -29,6 +29,7 @@ public class GroceryListExercise {
             console.nextLine();
         }
 
+        //add to file
         PrintStream output = new PrintStream(new File("itemOrder.txt"));
         list.printToFile(output);
         list.printList();
