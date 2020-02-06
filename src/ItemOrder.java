@@ -12,6 +12,14 @@ public class ItemOrder {
         list.addItemOrder(this);
     }
 
+    public ItemOrder(String name, GroceryList list){
+        this.name=name;
+        this.quantity=1;
+        this.price=0;
+
+        list.addItemOrder(this);
+    }
+
     public String toString() {
         return name + " - " + quantity + " x " + price;
     }
