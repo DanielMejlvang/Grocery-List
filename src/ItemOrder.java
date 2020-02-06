@@ -22,7 +22,7 @@ public class ItemOrder {
     }
 
     public String toString() {
-        return name + " - " + quantity + " x " + price;
+        return name + " - " + quantity + " x " + price + "\n\t\t" + quantity * price;
     }
 
     public String getName() {
