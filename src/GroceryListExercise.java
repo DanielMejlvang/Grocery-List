@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class GroceryListExercise {
     public static void main(String[] args) throws FileNotFoundException {
+        //add from file
         Scanner input = new Scanner(new File("itemOrder.txt"));
         GroceryList list = new GroceryList();
         addFromFile(list, input);
