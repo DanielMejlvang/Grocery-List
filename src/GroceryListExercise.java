@@ -13,7 +13,7 @@ public class GroceryListExercise {
         //create new item order by prompting user
         System.out.println("Create new item?\n1. Yes\n2. No");
         Scanner console = new Scanner(System.in);
-        int answer = console.nextInt();
+        int answer = console.nextInt(); //TODO: ensure user input
         console.nextLine(); //consumes linebreak from previous input
         while (answer == 1) {
             System.out.println("Please input item name: ");
@@ -22,9 +22,9 @@ public class GroceryListExercise {
             System.out.println("Do you know the quantity and price?\n1. Yes\n2. No");
             int answer2 = console.nextInt();
             console.nextLine();
-            if (answer2==2){
+            if (answer2 == 2){
+                //calls constructor using only name
                 new ItemOrder(itemName, list);
-
             } else {
                 System.out.println("Please input quantity: ");
                 int itemQuantity = console.nextInt();
@@ -33,6 +33,7 @@ public class GroceryListExercise {
                 new ItemOrder(itemName, itemQuantity, itemPrice, list);
             }
 
+            //prompts user whether they want to run the loop again
             System.out.println("Do you want to add another item?\n1. Yes\n2. No");
             answer = console.nextInt();
             console.nextLine();
