@@ -4,10 +4,12 @@ import java.util.ArrayList;
 public class GroceryList {
     ArrayList<ItemOrder> list = new ArrayList<>();
 
+    //method used when constructing new ItemOrder object that adds it directly to GroceryList ArrayList
     public void addItemOrder(ItemOrder itemOrder) {
         list.add(itemOrder);
     }
 
+    //get order total of all ItemOrders in the GroceryList
     public double getOrderTotal() {
         double orderTotal = 0;
         for (ItemOrder itemOrder : list) {
@@ -16,6 +18,7 @@ public class GroceryList {
         return orderTotal;
     }
 
+    //prints GroceryList to console
     public void printList() {
         System.out.println("This list contains:");
         for (ItemOrder itemOrder : list) {
@@ -24,8 +27,10 @@ public class GroceryList {
         System.out.println("Order total: DKK " + getOrderTotal() + ".");
     }
 
+    //prints only important information regarding each ItemOrder object to "itemOrder.txt" file
     public void printToFile(PrintStream output) {
         for (ItemOrder itemOrder : list) {
+            //values of objects are output with "," to seperate them and linebreak between each individual object
             output.println(itemOrder.getName() + "," + itemOrder.getQuantity() + "," + itemOrder.getPrice());
         }
     }

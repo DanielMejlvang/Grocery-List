@@ -8,6 +8,7 @@ public class ItemOrder {
         this.quantity = quantity;
         this.price = price;
 
+        //constructing this object will automatically add it to the GroceryList ArrayList
         list.addItemOrder(this);
     }
 
