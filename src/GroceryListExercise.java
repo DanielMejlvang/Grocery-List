@@ -37,7 +37,6 @@ public class GroceryListExercise {
             System.out.println("Do you want to add another item?\n1. Yes\n2. No");
             answer = console.nextInt();
             console.nextLine();
-
         }
 
         //prints GroceryList to file
