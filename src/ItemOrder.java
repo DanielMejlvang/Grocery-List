@@ -2,7 +2,7 @@ public class ItemOrder {
     private String name;
     private int quantity;
     private double price;
-
+//test kommentar
     public ItemOrder(String name, int quantity, double price, GroceryList list) {
         this.name = name;
         this.quantity = quantity;
