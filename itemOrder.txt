@@ -1,0 +1,6 @@
+Milk,2,10.5
+Flour,1,21.0
+Egg,3,16.5
+Butter,1,21.0
+Sugar,2,15.25
+Sandwich,1,12.0
