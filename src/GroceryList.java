@@ -21,7 +21,7 @@ public class GroceryList {
         for (ItemOrder itemOrder : list) {
             System.out.println(itemOrder);
         }
-        System.out.println("Order total: DKK" + getOrderTotal() + ".");
+        System.out.println("Order total: DKK " + getOrderTotal() + ".");
     }
 
     public void printToFile(PrintStream output) {
