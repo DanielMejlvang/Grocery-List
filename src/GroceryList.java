@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class GroceryList {
     ArrayList<ItemOrder> list = new ArrayList<>();
 
-    //method used when constructing new ItemOrder object that adds it directly to GroceryList ArrayList
+    //method used when constructing new ItemOrder object that adds the object directly to the GroceryList ArrayList
     public void addItemOrder(ItemOrder itemOrder) {
         list.add(itemOrder);
     }
@@ -30,7 +30,7 @@ public class GroceryList {
     //prints only important information regarding each ItemOrder object to "itemOrder.txt" file
     public void printToFile(PrintStream output) {
         for (ItemOrder itemOrder : list) {
-            //values of objects are output with "," to seperate them and linebreak between each individual object
+            //values of objects are output with "," to separate them and linebreak between each individual object
             output.println(itemOrder.getName() + "," + itemOrder.getQuantity() + "," + itemOrder.getPrice());
         }
     }
