@@ -18,15 +18,25 @@ public class GroceryListExercise {
         while (answer == 1) {
             System.out.println("Please input item name: ");
             String itemName = console.nextLine();
-            System.out.println("Please input quantity: ");
-            int itemQuantity = console.nextInt();
-            System.out.println("Please input price per unit: ");
-            double itemPrice = console.nextDouble();
-            new ItemOrder(itemName, itemQuantity, itemPrice, list);
+
+            System.out.println("Do you know the quantity and price?\n1. Yes\n2. No");
+            int answer2 = console.nextInt();
+            console.nextLine();
+            if (answer2==2){
+                new ItemOrder(itemName, list);
+
+            } else {
+                System.out.println("Please input quantity: ");
+                int itemQuantity = console.nextInt();
+                System.out.println("Please input price per unit: ");
+                double itemPrice = console.nextDouble();
+                new ItemOrder(itemName, itemQuantity, itemPrice, list);
+            }
 
             System.out.println("Do you want to add another item?\n1. Yes\n2. No");
             answer = console.nextInt();
             console.nextLine();
+
         }
 
         //prints GroceryList to file
