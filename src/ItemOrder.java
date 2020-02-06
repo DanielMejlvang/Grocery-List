@@ -12,7 +12,7 @@ public class ItemOrder {
         list.addItemOrder(this);
     }
 
-    //A second constructor that only needs a name to create a new object and ads it to the GroceryList ArrayList
+    //a second constructor that only needs a name to create a new object and adds it to the GroceryList ArrayList
     public ItemOrder(String name, GroceryList list){
         this.name=name;
         this.quantity=1;
