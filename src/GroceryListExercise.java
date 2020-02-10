@@ -10,6 +10,28 @@ public class GroceryListExercise {
         GroceryList list = new GroceryList();
         addFromFile(list, input);
 
+        createItemOrder(list);
+
+        //prints GroceryList to file
+        PrintStream output = new PrintStream(new File("itemOrder.txt"));
+        list.printToFile(output);
+        //prints GroceryList to console
+        list.printList();
+    }
+
+    //creates new ItemOrder from info stored in "itemOrder.txt" file
+    public static void addFromFile(GroceryList list, Scanner input) {
+        while (input.hasNextLine()) {
+            //line in file gets put in String
+            String line = input.nextLine();
+            //String method "split" is used to seperate 'line' into tokens that are put into a String array
+            String[] tokens = line.split(",");
+            //new itemOrder is created with info in array
+            new ItemOrder(tokens[0], Integer.parseInt(tokens[1]), Double.parseDouble(tokens[2]), list);
+        }
+    }
+
+    public static void createItemOrder(GroceryList list) {
         //create new item order by prompting user
         System.out.println("Create new item?\n1. Yes\n2. No");
         Scanner console = new Scanner(System.in);
@@ -37,24 +59,6 @@ public class GroceryListExercise {
             System.out.println("Do you want to add another item?\n1. Yes\n2. No");
             answer = console.nextInt();
             console.nextLine();
-        }
-
-        //prints GroceryList to file
-        PrintStream output = new PrintStream(new File("itemOrder.txt"));
-        list.printToFile(output);
-        //prints GroceryList to console
-        list.printList();
-    }
-
-    //creates new ItemOrder from info stored in "itemOrder.txt" file
-    public static void addFromFile(GroceryList list, Scanner input) {
-        while (input.hasNextLine()) {
-            //line in file gets put in String
-            String line = input.nextLine();
-            //String method "split" is used to seperate 'line' into tokens that are put into a String array
-            String[] tokens = line.split(",");
-            //new itemOrder is created with info in array
-            new ItemOrder(tokens[0], Integer.parseInt(tokens[1]), Double.parseDouble(tokens[2]), list);
         }
     }
 }

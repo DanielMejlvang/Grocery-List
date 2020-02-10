@@ -5,3 +5,4 @@ Butter,1,21.0
 Sugar,2,15.25
 Sandwich,1,12.0
 Pineapple,2,30.0
+Flower,3,7.0
